@@ -1,3 +1,9 @@
+# quiz_number_v1
+# this asks how many times the user wants to be quizzed 10 or 20 or 30 or 40 or 50 times
+# i got a bit carried away and made the part which asks the person what the numbers are in english
+# and then it also tells your score at the end
+
+
 import random
 
 how_many_times_quized = int(input("How many times do you want to place 10 times, 20 times, 30 times,"
@@ -31,5 +37,5 @@ while quiz_number <= how_many_times_quized / 2:
             print(f"Incorrect, the correct translation was {maori_numbers[num]}")
             quiz_number += 1
 
-print(f"you got {score} out of 10 correct ")
+print(f"you got {score} out of {how_many_times_quized} correct ")
 
