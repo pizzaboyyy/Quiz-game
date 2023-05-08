@@ -6,7 +6,7 @@
 
 import random
 
-how_many_times_quized = int(input("How many times do you want to place 10 times, 20 times, 30 times,"
+how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times,"
                                   " 40 times or 50 times?: "))
 
 maori_numbers = {"tahi": "one",
