@@ -11,7 +11,7 @@ def yes_no(show_instructions):
     while True:
 
         # Ask the user if they have played before
-        show_instructions = input("Have you played this game before?: ").lower()
+        show_instructions = input("Have you played this game before?: ")
         # If they say yes, output 'Program Continues
         if show_instructions == "yes" or show_instructions == "y":
             print("Program continues")

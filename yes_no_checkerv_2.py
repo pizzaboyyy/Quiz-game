@@ -31,3 +31,8 @@ def yes_no(question_text):
 
 # Main routine goes here
 played_before = yes_no("Have you played this game before: ")
+
+if played_before == "No":
+    print("Display instructions")
+else:
+    print("Program continues")
