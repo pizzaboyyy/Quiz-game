@@ -26,7 +26,7 @@ number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
 quiz_number = 0
 
-while quiz_number <= how_many_times_quized / 2:
+while quiz_number <= how_many_times_quizzed / 2:
     for num in number_list:
         answer = input(f"What is the English translation of {num} ? ")
         if answer.lower() == maori_numbers[num]:
@@ -37,5 +37,5 @@ while quiz_number <= how_many_times_quized / 2:
             print(f"Incorrect, the correct translation was {maori_numbers[num]}")
             quiz_number += 1
 
-print(f"you got {score} out of {how_many_times_quized} correct ")
+print(f"you got {score} out of {how_many_times_quizzed} correct ")
 
