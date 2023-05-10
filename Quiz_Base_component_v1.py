@@ -64,8 +64,10 @@ def check_integer(input_value):
 if check_integer(how_many_times_quizzed):
     print(f"You will be quizzed {how_many_times_quizzed} times")
 else:
-    print("Input is either not an integer or not 10, 20, 30, 40 or 50.")
+    print("Input is either not an integer or not 10, 20, 30, 40 or 50.\n"
+          "Please enter a valid number")
 
+# dictonary of Maori numbers and what they are in english
 maori_numbers = {"tahi": "one",
                  "rua": "two",
                  "toru": "three",
@@ -94,6 +96,5 @@ while quiz_number <= how_many_times_quizzed / 2:
             print(f"Incorrect, the correct translation was {maori_numbers[num]}")
             quiz_number += 1
 
-print(f"you got {score} out of {how_many_times_quizzed} correct ")
+print(f"you got {score} out of {how_many_times_quizzed} correct, thanks for playing. ")
 
-# Main routine goes here
