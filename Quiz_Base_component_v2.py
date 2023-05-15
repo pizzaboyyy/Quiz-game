@@ -1,5 +1,5 @@
-# Base component v1
-# Putting all the components together.
+# Base component v2
+# fixing my stupid game
 
 import random
 
@@ -46,8 +46,9 @@ else:
     print("program continues")
 
 
-how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
-                                  " 40 times or 50 times?: "))
+how_many_times = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
+                           " 40 times or 50 times?: "))
+how_many_times_quizzed = 0
 
 
 def check_integer(input_value):
@@ -56,16 +57,17 @@ def check_integer(input_value):
         if value in [10, 20, 30, 40, 50]:
             return True
         else:
-            return False
+            return print("Input is either not an integer or not 10, 20, 30, 40 or 50.\n"
+                         "Please enter a valid number")
     except ValueError:
         return False
 
 
-if check_integer(how_many_times_quizzed):
-    print(f"You will be quizzed {how_many_times_quizzed} times")
+if how_many_times == [10 or 20 or 30 or 40 or 50]:
+    how_many_times = how_many_times_quizzed
 else:
-    print("Input is either not an integer or not 10, 20, 30, 40 or 50.\n"
-          "Please enter a valid number")
+    print(input(how_many_times))
+
 
 # dictonary of Maori numbers and what they are in english
 maori_numbers = {"tahi": "one",
@@ -83,7 +85,7 @@ maori_numbers = {"tahi": "one",
 score = 0
 number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
-quiz_number = 0
+quiz_number = -1
 
 while quiz_number < how_many_times_quizzed:
     for num in number_list:

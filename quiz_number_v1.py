@@ -8,6 +8,7 @@ import random
 
 how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times,"
                                   " 40 times or 50 times?: "))
+print(f"You will be quizzed {how_many_times_quizzed} times")
 
 maori_numbers = {"tahi": "one",
                  "rua": "two",
@@ -26,7 +27,7 @@ number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
 quiz_number = 0
 
-while quiz_number <= how_many_times_quizzed / 2:
+while quiz_number < how_many_times_quizzed:
     for num in number_list:
         answer = input(f"What is the English translation of {num} ? ")
         if answer.lower() == maori_numbers[num]:
@@ -37,5 +38,7 @@ while quiz_number <= how_many_times_quizzed / 2:
             print(f"Incorrect, the correct translation was {maori_numbers[num]}")
             quiz_number += 1
 
+print()
 print(f"you got {score} out of {how_many_times_quizzed} correct ")
-
+print()
+print("Thank you for playing!")
