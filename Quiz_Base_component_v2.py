@@ -60,7 +60,9 @@ def check_integer(input_value):
     except ValueError:
         return False
 
+
 valid_answer = False
+
 while not valid_answer:
     if check_integer(how_many_times_quizzed):
         valid_answer = True
