@@ -6,7 +6,8 @@
 def instructions():
     print("***** How to play ******")
     print()
-    print("You will be asked a Maori number and you have to answer the question in english (eg. Tahi = one)")
+    print("You will be asked a Maori number and you have to answer the question in english \n"
+          "eg. What is the english translation of tahi?: awnser = one.")
     print()
     print("Have fun!")
     print()

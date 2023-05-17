@@ -13,8 +13,8 @@ def yes_no(question_text):
 
         # If they say yes, output 'Program Continues
         if answer == "yes" or answer == "y":
-            answer = "Yes"
-            return answer
+           answer = "Yes"
+           return answer
 
         # If they say no, output 'display instructions'
         elif answer == "no" or answer == "n":
@@ -46,9 +46,8 @@ else:
     print("program continues")
 
 
-how_many_times = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
-                           " 40 times or 50 times?: "))
-how_many_times_quizzed = 0
+how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
+                                  " 40 times or 50 times?: "))
 
 
 def check_integer(input_value):
@@ -57,17 +56,21 @@ def check_integer(input_value):
         if value in [10, 20, 30, 40, 50]:
             return True
         else:
-            return print("Input is either not an integer or not 10, 20, 30, 40 or 50.\n"
-                         "Please enter a valid number")
+            return False
     except ValueError:
         return False
 
-
-if how_many_times == [10 or 20 or 30 or 40 or 50]:
-    how_many_times = how_many_times_quizzed
-else:
-    print(input(how_many_times))
-
+valid_answer = False
+while not valid_answer:
+    if check_integer(how_many_times_quizzed):
+        valid_answer = True
+        print(f"You will be quizzed {how_many_times_quizzed} times")
+    else:
+        print("Input is either not an integer or not 10, 20, 30, 40 or 50.\n"
+              "Please enter a valid number")
+        how_many_times_quizzed = int(input(
+            "How many times do you want to place 10 times, 20 times, 30 times\n"
+            " 40 times or 50 times?: "))
 
 # dictonary of Maori numbers and what they are in english
 maori_numbers = {"tahi": "one",
@@ -85,7 +88,7 @@ maori_numbers = {"tahi": "one",
 score = 0
 number_list = list(maori_numbers.keys())
 random.shuffle(number_list)
-quiz_number = -1
+quiz_number = 0
 
 while quiz_number < how_many_times_quizzed:
     for num in number_list:

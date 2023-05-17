@@ -47,7 +47,7 @@ else:
 
 
 how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
-                                  " 40 times or 50 times?: "))
+                                   " 40 times or 50 times?: "))
 
 
 def check_integer(input_value):
