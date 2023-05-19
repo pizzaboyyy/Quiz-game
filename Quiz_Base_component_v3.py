@@ -4,6 +4,20 @@
 import random
 
 
+# integer checker to check if the integer is valid
+def check_integer(input_value):
+    try:
+        value = int(input_value)
+        # if the input is any of these values it continues
+        if value in [10, 20, 30, 40, 50]:
+            return True
+        # Otherwise the program returns false
+        else:
+            return False
+    except ValueError:
+        return False
+
+
 # yes/no checking function
 def yes_no(question_text):
     while True:
@@ -47,23 +61,12 @@ if played_before == "No":
 else:
     print(" ")
 
+
 # Ask the user how many times they want to be quizzed
-how_many_times_quizzed = int(input("How many times do you want to place 10 times, 20 times, 30 times\n"
-                                   " 40 times or 50 times?: "))
-
-
-# integer checker to check if the integer is valid
-def check_integer(input_value):
-    try:
-        value = int(input_value)
-        # if the input is any of these values it continues
-        if value in [10, 20, 30, 40, 50]:
-            return True
-        # Otherwise the program returns false
-        else:
-            return False
-    except ValueError:
-        return False
+how_many_times_quizzed = input("How many times do you want to place 10 times, 20 times, 30 times\n"
+                               " 40 times or 50 times?: ")
+print(type)
+# how_many_times_quizzed = int(check_integer(how_many_times_quizzed))
 
 
 valid_answer = False
