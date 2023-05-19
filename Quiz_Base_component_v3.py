@@ -47,14 +47,16 @@ def instructions():
     print("***** How to play ******")
     print()
     print("You will be asked a Maori number and you have to answer the question in english \n"
-          "eg. What is the english translation of tahi?: awnser = one.")
+          "eg. What is the english WORD translation (not number) of tahi?: awnser = one.")
     print()
     print("Have fun!")
     print()
 
 
 # Asks the user if they have played the game before
-played_before = yes_no("Have you played this game before: ")
+played_before = yes_no("Welcome to a Maori number quiz game!\n"
+                       "Have you played this game before?\n"
+                       "(please enter yes or no) press <enter> to confirm: ")
 
 if played_before == "No":
     instructions()
@@ -63,7 +65,7 @@ else:
 
 
 # Ask the user how many times they want to be quizzed
-how_many_times_quizzed = input("How many times do you want to place 10 times, 20 times, 30 times\n"
+how_many_times_quizzed = input("How many times do you want to play 10 times, 20 times, 30 times\n"
                                " 40 times or 50 times?: ")
 if check_integer(how_many_times_quizzed):
     how_many_times_quizzed = int(how_many_times_quizzed)
