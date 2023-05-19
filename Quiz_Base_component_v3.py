@@ -65,8 +65,8 @@ else:
 # Ask the user how many times they want to be quizzed
 how_many_times_quizzed = input("How many times do you want to place 10 times, 20 times, 30 times\n"
                                " 40 times or 50 times?: ")
-print(type)
-# how_many_times_quizzed = int(check_integer(how_many_times_quizzed))
+if check_integer(how_many_times_quizzed):
+    how_many_times_quizzed = int(how_many_times_quizzed)
 
 
 valid_answer = False
@@ -75,6 +75,7 @@ valid_answer = False
 while not valid_answer:
     # if the answer is valid it will print how many times they will be quizzed and the program will continue
     if check_integer(how_many_times_quizzed):
+        how_many_times_quizzed = int(how_many_times_quizzed)
         valid_answer = True
         print(f"You will be quizzed {how_many_times_quizzed} times")
     # otherwise they will be asked until there is a valid answer
